@@ -1,0 +1,142 @@
+<!--Santiago Brito(Nro 287318)-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Regalos Especiales</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/clases.js"></script>
+	<script src="js/funciones.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Regalos especiales</h1>
+		<h2>Sitio desarrollado por:
+			<a href="https://www.linkedin.com/in/santiago-brito-vaz-martins-a22a9b21b" target="_blank">Santiago Brito (Nro
+				287318)</a>
+		</h2>
+
+		<nav>
+			<a href="#linkExp">Gestión de experiencias</a>
+			<a href="#linkCat">Gestión de categorías</a>
+			<a href="#linkInfo">Informes</a>
+		</nav>
+	</header>
+	<article class="izquierda">
+		<h2>Categoría</h2>
+		<select id="selectCategoria1" class="selectCategoria">
+		</select>
+		<h2>Cantidad de personas</h2>
+		<select id="selectCantidadPersonas">
+			<option value="todos">Todos</option>
+			<option value="1Persona">1 persona</option>
+			<option value="2Personas">2 personas</option>
+			<option value="MasDe2Personas">Más de 2 personas</option>
+		</select>
+		<h2>Orden de precio</h2>
+		<select id="selectOrdenPrecio">
+			<option value="creciente">Creciente</option>
+			<option value="decreciente">Decreciente</option>
+		</select>
+		<br><br>
+	</article>
+	<article class="derecha">
+		<h2>Experiencias</h2>
+		<table id="tabla">
+			<caption> </caption>
+
+		</table>
+	</article>
+	<article class="derecha">
+		<h2>¡Comprar!</h2>
+		<form id="formulario1">
+			<p id="idCualExperiencia">Experiencia: <span id="spanSinDatos">Sin datos</span></p>
+			<label for="inputNombreComprador">Nombre Comprador:</label>
+			<input type="text" id="inputNombreComprador" required>
+			<label for="inputMail">Mail:</label>
+			<input type="email" id="inputMail" required>
+			<input type="button" id="botonComprar" disabled value="Comprar">
+			<br>
+			<br>
+		</form>
+	</article>
+	<article id="linkInfo" class="abajo banda0">
+		<h2>Informes</h2>
+		<p>Monto de la experiencia/s más cara/s</p>
+		<p id="parrafoMontoMasCaro">Sin datos</p>
+
+		<p id="idExperienciaMasVecesTexto">Experiencia/s más veces comprada</p>
+		<ul id="listaExpMasVecesComprada">
+			<li>Sin datos</li>
+		</ul>
+
+		<details>
+			<summary id="idSummary">Detalle de compras de la categoría seleccionada</summary>
+
+			<p id="idParrafoCompras">Compras realizadas</p>
+			<p id="parrafoInformacionDetallada"></p>
+			<ul id="ulInformacionDetallada">
+				<li>Sin datos</li>
+			</ul>
+		</details>
+
+	</article>
+	<article id="linkCat" class="abajo banda1">
+		<h2>Gestión de categorías</h2>
+		<form id="formulario2">
+			<label for="inputNombreCategoria">Nombre de la categoría:</label>
+			<input type="text" id="inputNombreCategoria" required>
+
+			<label for="inputDetallesCategoria">Detalles de la categoría:</label>
+			<input id="inputDetallesCategoria" required>
+
+			<input type="button" id="botonAgregarCategoria" value="Agregar">
+		</form>
+		<br>
+		<label for="selectCategoriaBorrar">Seleccionar categoría a borrar:</label>
+		<select id="selectCategoriaBorrar" class="selectCategoria">
+		</select>
+		<input id="botonEliminarCategoria" type="button" disabled value="Eliminar">
+	</article>
+	<article id="linkExp" class="abajo banda2">
+		<h2>Gestión de experiencias</h2>
+		<form id="formulario3">
+			<label for="inputTituloExperiencia">Título de la experiencia:</label>
+			<input type="text" id="inputTituloExperiencia" required>
+
+			<label for="inputDescripcionExperiencia">Descripción:</label>
+			<input id="inputDescripcionExperiencia" required>
+
+			<label for="inputPrecioExperiencia">Precio:</label>
+			<input type="number" id="inputPrecioExperiencia" required min="0">
+			<label>Cantidad: </label>
+			<select id="selectCantidadExperiencia">
+
+				<option value="1Persona" selected>1 persona</option>
+				<option value="2Personas">2 personas</option>
+				<option value="MasDe2Personas">Más de 2 personas</option>
+			</select>
+			<label for="selectCategoria2">Categoría:</label>
+			<select id="selectCategoria2" name="categoria" class="selectCategoria">
+			</select>
+			<input type="button" id="botonAgregarExperiencia" disabled value="Agregar">
+		</form>
+		<br>
+		<label for="selectExperienciaBorrar">Seleccionar experiencia a borrar:</label>
+		<select id="selectExperienciaBorrar" name="combo">
+		</select>
+		<input id="botonEliminarExperiencia" type="button" disabled value="Eliminar">
+	</article>
+
+
+	<footer>
+		<p>Sitio desarrollado por Santiago Brito (287318) - Universidad ORT Uruguay</p>
+	</footer>
+
+</body>
+
+</html>
